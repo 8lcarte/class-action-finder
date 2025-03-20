@@ -1,0 +1,69 @@
+# Development
+.git
+.github
+.husky
+.vscode
+.idea
+*.log
+*.tsbuildinfo
+.env*
+.next
+.vercel
+coverage
+cypress
+node_modules
+.DS_Store
+
+# Source files
+src/**/*.test.ts
+src/**/*.test.tsx
+src/**/*.spec.ts
+src/**/*.spec.tsx
+__tests__
+__mocks__
+
+# Configuration files
+.eslintrc*
+.prettierrc*
+.editorconfig
+jest.config.*
+cypress.config.*
+tsconfig.json
+next.config.js
+next.config.ts
+postcss.config.js
+tailwind.config.js
+
+# Documentation
+docs
+*.md
+!README.md
+
+# Build artifacts
+dist
+build
+.cache
+
+# Docker
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# Scripts and tools
+scripts
+monitoring
+migrations
+
+# Development configs
+.env.example
+.env.local
+.env.development
+.env.test
+
+# Misc
+*.map
+*.swp
+.npmrc
+.yarnrc
+yarn.lock
+package-lock.json
