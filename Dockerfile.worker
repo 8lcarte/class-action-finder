@@ -1,0 +1,20 @@
+# Use Node.js LTS version as the base image
+FROM node:20-alpine
+
+# Set working directory
+WORKDIR /app
+
+# Install dependencies
+COPY package.json pnpm-lock.yaml* ./
+RUN npm install -g pnpm && pnpm install --frozen-lockfile
+
+# Copy worker code
+COPY ./src/workers ./src/workers
+COPY ./src/lib ./src/lib
+COPY ./src/services ./src/services
+
+# Set environment variables
+ENV NODE_ENV production
+
+# Start the worker
+CMD ["node", "src/workers/index.js"]
